@@ -296,4 +296,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
->>>>>>> 67b2f22 (Updated Project)
+
+.DS_Store
