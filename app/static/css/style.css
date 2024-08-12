@@ -1,0 +1,794 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+li,
+a,
+button {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 100;
+    width: 100%;
+}
+
+.account_settings{
+    display: flex;
+    font-size: 1.25rem;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+
+.account_settings i{
+    font-size: 40px;
+    box-shadow: none;
+    transform: none;
+    margin-right: 10px;
+}
+.logo {
+    cursor: pointer;
+    height: 70px;
+}
+
+.authButtons {
+    display: flex;
+    align-items: center;
+}
+
+.authButtons button {
+    padding: 9px 25px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.authButtons button:hover {
+    background: white;
+    color: rgba(36, 37, 42, 0.8);
+}
+
+.authButtons.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: rgba(36, 37, 42, 0.8);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-size: 24px;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+#menu {
+    display: none;
+}
+
+.cloudSVG {
+    position: fixed;
+    bottom: 0px;
+}
+
+.content {
+    display: flex;
+    margin: 5%;
+}
+
+.bodyTitleGroup {
+    display: flex;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.bodyTitleContent {
+    display: block;
+}
+
+.bodyTitleCardGroup {
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+
+    /* background: url('cloud.svg'); */
+}
+
+.bodyTitle {
+    color: #11beed;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.key_features {
+    color: #11beed;
+}
+
+.bodyDescription {
+    font-family: "Montserrat", sans-serif;
+
+    text-wrap: pretty;
+    width: 75%;
+    display: block;
+    color: white;
+}
+
+.cardContainer {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-link {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.loginCard {
+    color: white;
+    width: 50%;
+    background: white;
+    border-radius: 10px;
+
+    /* background-color: white; */
+}
+
+.loginCard h1 {
+    text-align: center;
+}
+
+.loginCard .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    color: white;
+}
+
+.input-box input::placeholder {
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.input-box i {
+    position: absolute;
+    transform: translate(-35px, 15px);
+    font-size: 20px;
+}
+
+.loginCard .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.loginCard .btn {
+    width: 100%;
+    height: 50px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #24252a;
+    font-weight: 600;
+}
+
+.loginCard .btn:hover {
+    background: #24252a;
+    color: white;
+    border: 2px solid white;
+}
+
+.loginCard .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+.loginCard .btn:disabled {
+    background: #24252a;
+    color: grey;
+    border: 1px solid grey;
+}
+
+.uploadModal {
+    display: none;
+    position: relative;
+    width: 98%;
+    max-width: 500px;
+    height: 50%;
+    min-height: 500px;
+    background-color: white;
+    margin: auto;
+    margin-top: 5%;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 10px;
+    /* border: 2px dashed #24252a; */
+    filter: drop-shadow(3px 5px #11beed);
+}
+
+.modalHeader {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.modalLogo {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+}
+
+.modalLogo .logo {
+    background-image: linear-gradient(#11beed, #24252a);
+    color: transparent;
+    background-clip: text;
+}
+
+.modalLogo .logo {
+    box-shadow: none;
+    transform: none;
+}
+
+.modalClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25 rem;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #24252a;
+}
+
+.modalClose i {
+    font-size: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.modalClose i {
+    box-shadow: none;
+}
+.modalBody {
+    background-color: transparent;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.modalTitle,
+.modelDesc {
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: transparent;
+    color: #24252a;
+}
+
+.uploadArea {
+    margin-top: 1.25rem;
+    border: 2px solid grey;
+    border-style: dashed;
+    border-width: 4px;
+    padding: 3rem;
+    width: 100%;
+    display: flex;
+    color: #24252a;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-align: center;
+    background: transparent;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.uploadArea .uploadIcon {
+    font-size: 50px;
+    background: transparent;
+    color: #24252a;
+}
+
+.uploadArea .uploadIcon {
+    transform: none;
+    box-shadow: none;
+}
+
+.uploadArea--over {
+	border-style: solid;
+}
+
+.inputFileUpload{
+    visibility: hidden;
+    background: transparent;
+    color: #24252a;
+}
+
+.fileUploadLabel{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+
+.inputFileUpload::after{
+    display: none;
+}
+
+
+input[type="file"]::file-selector-button{
+    border-radius: 10px;
+}
+
+.inputFileUpload__thumb {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #cccccc;
+	background-size: cover;
+	position: relative;
+}
+
+.inputFileUpload::after {
+	content: attr(data-label);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 5px 0;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.75);
+	font-size: 14px;
+	text-align: center;
+}
+.uploadInst {
+    color: #24252a;
+    background: transparent;
+}
+
+.uploadSelect {
+    color: #24252a;
+    background: transparent;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.uploadSelectp{
+    color: #24252a;
+    background: transparent;
+    font-weight: 600;
+}
+
+.emailGroupList {
+    background: transparent;
+    color: #24252a;
+    margin: 30px 10px 10px 10px;
+    display: flex;
+}
+
+.emailContainer, .emailInputGroup, .emailSubmit, 
+.emailInput, .emailTags, .emailTag, .emailInputInst{
+    background: transparent;
+    color: #24252a;
+}
+
+.emailContainer{
+    width: 100%;
+}
+
+
+.emailInputGroup{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.emailInput{
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(36, 37, 42, 0.5);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #24252a;
+    padding: 10px;
+    
+}
+
+
+
+.emailSubmit{
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.emailSubmit:hover{
+    transform: scale(1.10);
+    box-shadow: none;
+}
+
+.emailTags{
+    width: 100%;
+    border-radius: 40px;
+    border: 2px solid rgba(36, 37, 42, 0.5);
+    margin-top: 10px ;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emailTags .emailTag{
+    width: auto;
+    border: 1px solid #11beed;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+.emailTag i{
+    background: transparent;
+    color: #24252a;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.emailTag i:hover{
+    transform: scale(1.10);
+    box-shadow:none
+}
+
+.modalFooter {
+    background: transparent;
+    color: #24252a;
+    padding: 1rem 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modalFooter .modalCancel,  .modalFooter .modalUpload{
+    background: transparent;
+    border: 1px solid #24252a;
+    border-radius: 20px;
+    padding: 10px;
+    color: #24252a;
+}
+
+.cardGrid {
+    margin: 1%;
+}
+
+.filesHeader {
+    display: flex;
+    justify-content: left;
+    color: white;
+    margin-left: 15%;
+}
+
+.filesHeader h3 {
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #11beed;
+    font-weight: 300;
+    font-size: 24px;
+    text-shadow: #edf0f1;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fileCard {
+    display: inline-block;
+    overflow: hidden;
+    border: 2px dashed #11beed;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+
+.fileCard:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(36, 37, 42, 0.7) 0px 0px 11px;
+}
+
+.fileCardContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fileCard .fileIcon {
+    margin: 5px;
+    color: white;
+    font-size: 48px;
+}
+
+.filename {
+    color: white;
+    font-family: "Montserrat Alternates";
+    overflow: hidden;
+    text-wrap:nowrap;
+}
+
+.uploadBtn {
+    background: white;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    color: #24252a;
+    font-size: 40px;
+    font-weight: 100;
+    border: 2px dashed #11beed;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.downloadContent{
+    color: white;
+    margin: 5%;
+}
+
+.downloadContent h2{
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.downloadCard{
+    display: flex;
+    border: 2px dashed #11beed;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.downloadCardContent{
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.downloadCardContent .downloadFilename{
+    color: white;
+    font-family: "Montserrat Alternates";
+    overflow: hidden;
+    width: 100%;
+    margin: 5px;
+}
+
+.downloadCardContent .fileIcon {
+    margin: 5px;
+    color: white;
+    font-size: 30px;
+}
+
+.downloadCardContent .downloadIcon{
+    font-size: 30px;
+}
+
+.invalidFile{
+    font-weight: 200;
+    text-align: center;
+}
+
+
+.emptyHome{
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 300px;
+}
+
+.emptyHome h2{
+    color: white;
+    font-weight: 200;
+
+}
+
+
+.downloadHiddenText, .homehiddenText{
+    display: none;
+}
+@media (min-width: 800px) {
+    .loginCard {
+        width: 25%;
+    }
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .cloudSVG {
+        position: fixed;
+        bottom: 0px;
+        height: 30%;
+    }
+
+    .content {
+        margin-top: 20%;
+        text-align: -webkit-center;
+    }
+    .bodyTitle {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .bodyDescription {
+        text-align: justify;
+        width: 70%;
+    }
+
+    .bodyTitleCardGroup {
+        display: none;
+    }
+
+    .loginCard {
+        width: 75%;
+    }
+
+    .uploadBtn {
+        background: white;
+        position: fixed;
+        bottom: 30px;
+        right: 15px;
+        border-radius: 50%;
+        padding: 10px;
+        color: #24252a;
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+    .cardRow {
+        flex-direction: column;
+    }
+
+    .uploadModal{
+        margin-top: 5%;
+    }
+
+    .account_settings{
+        font-size: 1rem;
+    }
+
+    .emptyHome h2{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+    .cloudSVG {
+        position: fixed;
+        bottom: 0px;
+        height: 30%;
+    }
+
+    .bodyTitle {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .bodyTitleCardGroup {
+        display: none;
+    }
+
+    .loginCard {
+        width: 75%;
+    }
+    .account_settings, .account_settings p{
+        font-size: 1rem;
+    }
+
+    .emptyHome h2{
+        font-size: 1rem;
+    }
+}
